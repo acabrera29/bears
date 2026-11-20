@@ -53,7 +53,18 @@ The adjusted R-Squared is 0.8463, which is bigger than the previous models.
 
 ## Model LENGTH ~ HeadWTH
 
+```{r}
+plot(LENGTH ~ HEADWTH,data=bears,pch=19)
+```
 
+The plot for this is a bit confusing, it seems that as head width increases, length loosely increases as well. However, there is quite a bit of deviation from the usual linear plot.
+
+```{r}
+model.3 <- lm(LENGTH~HEADWTH,data=bears)
+summary.lm(model.3)
+```
+
+The adjusted R-squared is 0.5321, which is much lower than the previous ones. This makes the plot the lowest score so far.
 
 ## Model LENGTH ~ CHEST
 
