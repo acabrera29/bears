@@ -20,6 +20,15 @@ bears$MONTH<- as.factor(bears$MONTH)
 
 ## Model LENGTH ~ NECK  this is an example  
 
+```{r}
+plot(LENGTH ~ NECK,data=bears,pch=19)
+```
+As neck circumference increases, length tends to increase. This means the plot is primarily linear.
+
+```{r}
+model.1 <- lm(LENGTH~NECK,data=bears)
+summary.lm(model.1)
+```
 
 Compare all models that predict LENGTH other than NECK.  
 Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
