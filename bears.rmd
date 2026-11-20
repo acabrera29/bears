@@ -68,7 +68,18 @@ The adjusted R-squared is 0.5321, which is much lower than the previous ones. Th
 
 ## Model LENGTH ~ CHEST
 
+```{r}
+plot(LENGTH ~ CHEST,data=bears,pch=19)
+```
 
+This plot is fairly similar to the first 2 plots; as chest size increases, so does the length in a somewhat linear fashion. There is also a bit of deviation too.
+
+```{r}
+model.4 <- lm(LENGTH~CHEST,data=bears)
+summary.lm(model.4)
+```
+
+The adjusted R-Squared is 0.7869, which is the second largest so far.
 
 ## Model LENGTH ~ WEIGHT
 
