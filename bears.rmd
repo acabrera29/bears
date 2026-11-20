@@ -23,7 +23,8 @@ bears$MONTH<- as.factor(bears$MONTH)
 ```{r}
 plot(LENGTH ~ NECK,data=bears,pch=19)
 ```
-As neck circumference increases, length tends to increase. This means the plot is primarily linear.
+
+              As neck circumference increases, length tends to increase. This means the plot is primarily linear.
 
 ```{r}
 model.1 <- lm(LENGTH~NECK,data=bears)
