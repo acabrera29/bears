@@ -83,4 +83,23 @@ The adjusted R-Squared is 0.7869, which is the second largest so far.
 
 ## Model LENGTH ~ WEIGHT
 
+```{r}
+plot(LENGTH ~ WEIGHT,data=bears,pch=19)
+```
 
+As weight increases, so does length; especially at the beginning of the plot. This makes the beginning of the plot deviate a bit from the usual linear plots.
+
+```{r}
+model.5 <- lm(LENGTH~WEIGHT,data=bears)
+summary.lm(model.5)
+```
+
+The adjusted R-Squared is 0.7423, which makes it one of the lower numbers.
+
+# Final Rankings
+# Adjusted R-Squared values in order from biggest to smallest
+  LENGTH~HEADLEN=0.8434 
+  LENGTH~CHEST=0.7869 
+  LENGTH~NECK=0.7476 
+  LENGTH~WEIGHT=0.7423 
+  LENGTH~HEADWTH=0.5321 
