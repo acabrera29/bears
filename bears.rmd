@@ -31,12 +31,25 @@ model.1 <- lm(LENGTH~NECK,data=bears)
 summary.lm(model.1)
 ```
 
+The adjusted R-Squared is 0.7476.
+
 Compare all models that predict LENGTH other than NECK.  
 Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
 ## Model LENGTH ~ HEADLEN
 
+```{r}
+plot(LENGTH ~ HEADLEN,data=bears,pch=19)
+```
 
+As headlength increases, so does length. However, this boxplot is not entirely linear.
+
+```{r}
+model.2 <- lm(LENGTH~HEADLEN,data=bears)
+summary.lm(model.2)
+```
+
+The adjusted R-Squared is 0.8463, which is bigger than the previous models.
 
 ## Model LENGTH ~ HeadWTH
 
